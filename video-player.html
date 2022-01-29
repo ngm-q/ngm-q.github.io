@@ -5,39 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<style>
-  #videoIframe {
-    width: !important 100%;
-    height: auto;
-    text-align: !important center;
-  }
-
-</style>
-
 </head>
 
 <body onLoad="iframeLoad();">
 
-<div class="w3-container w3-teal w3-margin-bottom">
-<h1>Lawn Irrigation System</h1>
-<!--<a href="tryw3css_examples_sauvignon_blanc.htm"><span class="w3-left w3-xxlarge">«</span></a>
-<a href="tryw3css_examples_sauvignon_blanc.htm"><span class="w3-right w3-xxlarge">»</span></a>-->
-</div>
-
-<div class="w3-row-padding ">
-
-  <div class="w3-container">
-    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/FvWFR9x7aOU" title="Lawn Irrigation System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-
-    <!--<iframe src="https://drive.google.com/file/d/1PLN_mUPyqyySTA2MuaDQpbBGMdtaOl0h/preview" width="640" height="480" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-
-    <iframe src="" id="videoIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
-  </div>
+<div style="width: 100%; height: 100%; text-align: center;">
+    <iframe src="" id="videoIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen style="width: 100%; height: 720px;"></iframe>
 </div>
 
 <script>
   function iframeLoad() {
       var baseURL = "https://drive.google.com/file/d/" ;
+
       var url_string = window.location.href ;
       var url = new URL(url_string);
       var vid = url.searchParams.get("vid");
