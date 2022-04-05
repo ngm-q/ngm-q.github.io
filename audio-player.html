@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Player | NGM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body onLoad="iframeLoad();">
+
+<div style="width: 100%; height: 100%; text-align: center;">
+    <audio controls>    
+        <source src="" id="audioframe" type="audio/mp3">    
+    </audio>
+</div>
+
+<script>
+  function iframeLoad() {
+      var baseURL = "https://drive.google.com/drive/u/2/folders/" ;
+
+      var url_string = window.location.href ;
+      var url = new URL(url_string);
+      var a_id = url.searchParams.get("a_id");
+      document.getElementById('audioframe').src = baseURL + a_id ;
+      console.log(baseURL + a_id);
+  }
+    
+</script>
+
+</body>
+</html>
