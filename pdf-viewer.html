@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audio Player | Important point to Remember | NGM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body onLoad="iframeLoad();">
+
+<div style="width: 100%; height: 100%; text-align: center;">
+    <iframe src="" id="pdfIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen style="width: 100%; height: 720px;"></iframe>
+</div>
+
+<script>
+  function iframeLoad() {
+      var baseURL = "https://drive.google.com/file/d/" ;
+
+      var url_string = window.location.href ;
+      var url = new URL(url_string);
+      var pid = url.searchParams.get("pid");
+      document.getElementById('pdfIframe').src = baseURL + pid + "/preview";
+      console.log(baseURL + pid + "/preview");
+  }
+    
+</script>
+
+</body>
+</html>
+
